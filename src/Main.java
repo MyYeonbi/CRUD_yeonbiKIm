@@ -62,5 +62,12 @@ public class Main {
                 }
         System.out.println("아이템을 찾을수 없습니다. ");
     }
+    private static void deleteItem(Scanner scanner) {
+        System.out.println("삭제할 아이템 ID를 입력하세요");
+        int id = scanner.nextInt();
+        scanner.nextLine()
+        items.removeIf(item -> item.getId() == id);
+        System.out.println("아이템이 성공적으로 삭제되었습니다. ");
+    }
 
 }
